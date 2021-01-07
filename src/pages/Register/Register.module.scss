@@ -1,0 +1,28 @@
+.register {
+    width: 100%;
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    margin: 0 auto;
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 500px;
+    padding: 40px;
+}
+
+.loading {
+    background-color: orange;
+}
+
+.list>li{
+    color: red;        
+    list-style: none;
+}

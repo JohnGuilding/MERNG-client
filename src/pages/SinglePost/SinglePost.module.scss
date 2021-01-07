@@ -1,0 +1,115 @@
+.postPage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.post {
+    height: 300px;
+    width: 700px;
+    margin: 40px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    "user user user user "
+    "body body body body"
+    "date date date date"
+    "likeBtn likeBtn commentBtn commentBtn";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 10px;
+}
+
+.user {
+    grid-area: user;
+}
+
+.body {
+    grid-area: body;
+}
+
+.date {
+    grid-area: date;
+}
+
+.likeBtn {
+    grid-area: likeBtn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        width: 60px;
+    }
+
+    div {
+        width: 20px;
+        padding: 5px;
+    }
+}
+.commentBtn {
+    grid-area: commentBtn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        width: 60px;
+    }
+
+    div {
+        width: 20px;
+        padding: 5px;
+    }
+}
+
+// .deleteBtn {
+//     grid-area: deleteBtn
+// }
+
+.formContainer {
+    border: 1px solid black;
+    height: 100px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.comment {
+    border: 1px solid black;
+    height: 110px;
+    width: 600px;
+    display: grid;
+    grid-template-areas: 
+        "user deleteBtn"
+        "date date"
+        "body body";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+// .comment > * {
+//     background-color: green;
+// }
+
+.deleteBtn {
+    grid-area: deleteBtn;
+}
+
+.user {
+    grid-area: user;
+}
+
+.date {
+    grid-area: date;
+}
+
+.body {
+    grid-area: body;
+}

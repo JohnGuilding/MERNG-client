@@ -1,0 +1,62 @@
+.post {
+    border: 1px solid;
+    display: grid;
+    height: 180px;
+    width: 85%;
+    grid-template-areas: 
+    "user user user user "
+    "body body body body"
+    "date date date date "
+    "likeBtn likeBtn commentBtn commentBtn";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.user {
+    grid-area: user;
+}
+
+.body {
+    grid-area: body;
+}
+
+.date {
+    grid-area: date;
+}
+
+.likeBtn {
+    grid-area: likeBtn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        width: 60px;
+    }
+
+    div {
+        width: 20px;
+        padding: 5px;
+    }
+}
+.commentBtn {
+    grid-area: commentBtn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        width: 60px;
+    }
+
+    div {
+        width: 20px;
+        padding: 5px;
+    }
+}
+
+// .deleteBtn {
+//     grid-area: deleteBtn
+// }

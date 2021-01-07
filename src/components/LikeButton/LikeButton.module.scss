@@ -1,0 +1,23 @@
+.likeBtn {
+    grid-area: likeBtn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        width: 60px;
+    }
+
+    div {
+        width: 20px;
+        padding: 5px;
+    }
+}
+
+.liked {
+    color: green;
+}
+
+.notSignedIn {
+    color: red;
+}

@@ -1,0 +1,21 @@
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-out;
+    height: 250px;
+    width: 500px;
+    border: 1px solid black;
+}
+
+.open {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.closed {
+    display: none;
+}
