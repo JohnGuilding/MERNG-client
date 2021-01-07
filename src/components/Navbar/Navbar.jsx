@@ -9,11 +9,11 @@ const Navbar = () => {
 
     const pathName = window.location.pathname;
     const path = pathName === "/" ? "home" : pathName.substr(1);
-    const [activeItem, setActiveItem] = useState(path);
+    // const [activeItem, setActiveItem] = useState(path);
 
-    const handleClick = (e) => {
-        console.log(e.target);
-    };
+    // const handleClick = (e) => {
+    //     console.log(e.target);
+    // };
 
     const navBar = user ? (
         <nav>
@@ -39,7 +39,7 @@ const Navbar = () => {
     );
 
     return (
-      navBar
+        navBar
     );
 };
 
