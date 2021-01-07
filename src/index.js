@@ -6,7 +6,7 @@ import { ApolloClient, InMemoryCache, createHttpLink, ApolloProvider } from '@ap
 import { setContext } from 'apollo-link-context';
 
 const httpLink = createHttpLink({
-    uri: 'http://localhost:5000/'
+    uri: 'https://fast-waters-48172.herokuapp.com/'
 });
 
 // sets the header to jwt so that users can post??? check comment
