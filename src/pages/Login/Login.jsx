@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import styles from "./Login.module.scss";
 import { useMutation } from "@apollo/client";
 import gql from "graphql-tag";
-import { PromiseProvider } from "mongoose";
 
 import { AuthContext } from '../../context/auth';
 import { useForm } from "../../utilities/hooks"; 
