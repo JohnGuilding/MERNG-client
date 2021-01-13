@@ -1,3 +1,14 @@
+.postBorder {
+    height: 260px;
+    width: 910px;
+    background-image: linear-gradient(to right, #fc00ff, #00dbde);
+    border-radius: 30px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .post {
     display: grid;
     height: 250px;
@@ -10,9 +21,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     margin: 10px auto;
-    padding: 10px;
+    padding: 15px;
     border-radius: 25px;
-    box-shadow: 2px 2px 2px rgb(235, 233, 233);
+    // box-shadow: 2px 2px 2px rgb(235, 233, 233);
     background-color: white;
 }
 
