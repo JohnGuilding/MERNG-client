@@ -3,6 +3,8 @@ import styles from "./LikeButton.module.scss";
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const LikeButton = ({ user, post: { id, likes, likeCount }}) => {
 
@@ -31,10 +33,13 @@ const LikeButton = ({ user, post: { id, likes, likeCount }}) => {
     )
     // const likeButton = user ? styles.liked : styles.notSignedIn;
 
+    const thumbsUpIcon = liked ? ["fa", "thumbs-up"] : ["far", "thumbs-up"];
+
     return (
         <>
             <div className={styles.likeBtn}>
                 {likeBtn}
+                <FontAwesomeIcon icon={thumbsUpIcon}/>
                 <div>{likeCount}</div>
             </div>
         </>

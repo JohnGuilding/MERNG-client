@@ -7,6 +7,7 @@ import { AuthContext } from "./../../context/auth";
 import LikeButton from "../LikeButton";
 import DeleteButton from './../DeleteButton';
 
+
 const Post = (props) => {
     const {
         body,
@@ -21,7 +22,9 @@ const Post = (props) => {
     const { user } = useContext(AuthContext);
 
     return (
+        
         <article className={styles.postBorder}>
+
             <div className={styles.post}>
                 <h2 className={styles.user}>{username}</h2>
                 <p className={styles.body}>{body}</p>
