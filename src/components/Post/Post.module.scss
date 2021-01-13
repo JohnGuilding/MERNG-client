@@ -1,8 +1,7 @@
 .post {
-    border: 1px solid;
     display: grid;
-    height: 180px;
-    width: 85%;
+    height: 250px;
+    width: 900px;
     grid-template-areas: 
     "user user user user "
     "body body body body"
@@ -12,6 +11,9 @@
     grid-template-rows: auto;
     margin: 10px auto;
     padding: 10px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px rgb(235, 233, 233);
+    background-color: white;
 }
 
 .user {
