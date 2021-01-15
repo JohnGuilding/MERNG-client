@@ -3,37 +3,79 @@ import styles from "./Navbar.module.scss";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../../context/auth";
+import { useEffect } from "react";
 
 const Navbar = () => {
+
     const { user, logout } = useContext(AuthContext);
 
     const pathName = window.location.pathname;
-    const path = pathName === "/" ? "home" : pathName.substr(1);
-    // const [activeItem, setActiveItem] = useState(path);
+    const path = pathName === "/" ? 'home' : pathName.substr(1);
+    const [activeItem, setActiveItem] = useState(path);
 
-    // const handleClick = (e) => {
-    //     console.log(e.target);
-    // };
+    switch (pathName) {
+        case "/":
+            console.log('home');
+        //     // styles.home
+            break;
+        case "/login":
+            // styles.login;
+            console.log('login');
+            break;
+        case "/register": 
+            // styles.register;
+            console.log('register');
+            break;
+        default:
+            console.log('no such pathname exists');
+    }
+
+    // console.log(pathName);
+    // console.log(activeItem)
 
     const navBar = user ? (
         <nav>
-            <div className={styles.home}>
-                <Link to="/">{user.username}</Link>
+            <div>
+                <Link  
+                    className={styles.link} 
+                    to="/" 
+                >{user.username}
+                </Link>
             </div>
-            <div className={styles.login}>
-                <Link to="/login" onClick={logout}>Logout</Link>
+            <div>
+                <Link 
+                    className={styles.link} 
+                    to="/login" 
+                    onClick={logout}
+                >Logout
+                </Link>
             </div>
         </nav>
     ) : (
         <nav>
-            <div className={styles.home}>
-                <Link to="/">Home</Link>
+            <div>
+                <Link 
+                    className={`${styles.link} ${activeItem}`} 
+                    to="/" 
+                    name="home" 
+                >Home
+                </Link>
             </div>
-            <div className={styles.login}>
-                <Link to="/login">Login</Link>
+            <div>
+                <Link 
+                    className={styles.link} 
+                    to="/login" 
+                    name="login"
+                >Login
+                </Link>
             </div>
-            <div className={styles.login}>
-                <Link to="/register">Register</Link>
+            <div>
+                <Link 
+                    className={`${styles.link} ${styles.test}`} 
+                    to="/register" 
+                    name="register"
+                >Register
+                </Link>
             </div>
         </nav>
     );

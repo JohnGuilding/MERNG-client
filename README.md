@@ -4,6 +4,3 @@
 
 <!-- THINGS TO ADD -->
 <Pop-ups> when hovering over icons
-
-If desired, remove them manually with `rm -rf`:
-  /usr/local/etc/bash_completion.d
